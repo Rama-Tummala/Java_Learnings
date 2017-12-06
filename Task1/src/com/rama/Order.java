@@ -18,10 +18,18 @@ public class Order extends Phone {
 		// TODO Auto-generated constructor stub
 	}
 	*/
+	
 	public void ProcessOrder( String username,String password)
 	{
+		if (Phone.IsValidColor(this.color))
+		{
 		System.out.println("order sucessfully processed");
+		
 		System.out.println("Your Iphone color is ");
+		}
+		else
+			System.out.println("order cannot be processed");
+			
 	}
 	
 
