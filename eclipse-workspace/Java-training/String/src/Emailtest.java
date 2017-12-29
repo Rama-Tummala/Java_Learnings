@@ -24,26 +24,29 @@ public class Emailtest {
 			
 			if(!bad.contains(str1)&& str2.contains(".")) {
 				
-				int j	= str.indexOf('.');
-				String str3 = str2.substring(0,j );
-				String str4 = str2.substring(j,str2.length() );
+				int j	= str2.indexOf('.');
+				String str3 = str2.substring(0,j-1 );
+				String str4 = str2.substring(j-1,str2.length() );
 				
-				if(str3.length()>2&& !bad.contains(str3) && !bad.contains(str4))
+				//System.out.println("str3 "+str3);
+				//System.out.println("str4 "+str4);
+				
+				if(str3.length()>1 && !bad.contains(str3) && !bad.contains(str4))
 				{
-					System.out.println("Valid Email");
+					System.out.println("Valid Email"+str);
 				}
 				
 				
 				else
 					
 				{
-					System.out.println("Invalid Domain name");
+					System.out.println("Invalid Domain name"+str);
 				}
 			}
 			else
 				
 			{
-				System.out.println("Invalid username");
+				System.out.println("Invalid username"+str);
 			}
 			
 			
@@ -52,7 +55,7 @@ public class Emailtest {
 		}else
 			
 		{
-			System.out.println("Invalid Email");
+			System.out.println("Invalid Email"+str);
 		}
 		
 	}
